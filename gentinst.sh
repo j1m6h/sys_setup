@@ -11,10 +11,10 @@ emerge -av dev-vcs/git x11-misc/picom media-gfx/feh sys-apps/lsd media-fonts/hac
 outputdir="/usr/local/src/"
 mkdir /usr/local/src
 
-git clone https://github.com/j1m6h/dwm $outputdir
-git clone https://github.com/j1m6h/st $outputdir
-git clone https://github.com/j1m6h/dmenu $outputdir
-git clone https://github.com/j1m6h/dwmblocks $outputdir
+git clone https://github.com/j1m6h/dwm $outputdir/dwm
+git clone https://github.com/j1m6h/st $outputdir/st
+git clone https://github.com/j1m6h/dmenu $outputdir/dmenu
+git clone https://github.com/j1m6h/dwmblocks $outputdir/dwmblocks
 
 cd /usr/local/src/dwm && make clean install 
 cd ../st && make clean install
