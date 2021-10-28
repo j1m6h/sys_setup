@@ -6,7 +6,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 echo "Gathering deps..."
-xbps-install -S xorg base-devel libX11-devel libXft-devel libXinerama-devel git picom feh lsd
+xbps-install -S xorg base-devel libX11-devel libXft-devel libXinerama-devel git font-hack-ttf picom feh lsd
 
 outputdir="/usr/local/src/"
 mkdir /usr/local/src
