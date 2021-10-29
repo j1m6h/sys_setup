@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Downloading dotfiles..."
 curl https://raw.githubusercontent.com/j1m6h/dotfiles/main/.xinitrc > ~/.xinitrc
