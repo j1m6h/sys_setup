@@ -1,5 +1,7 @@
 #!/bin/sh
 
+homedir="/home/joshua"
+
 if [ "$EUID" -ne 0 ]; then
 	echo "**Must be root in order to install base system**"
 	exit
@@ -39,7 +41,7 @@ if [ "$xinerama" = "" ]; then
 	emerge -av x11-libs/libXinerama
 fi
 
-outputdir="/home/joshua/src"
+outputdir=$homedir/src
 if [ ! -d $outputdir ]; then
 	mkdir $outputdir
 fi
@@ -69,3 +71,7 @@ cd $outputdir/dwm && make clean install
 cd ../st && make clean install
 cd ../dmenu && make clean install
 cd ../dwmblocks && make clean install
+
+if [ ! -d "$homedir/pix/ss" ]; then
+	mkdir $homedir/pix/ss
+fi
