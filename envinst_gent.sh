@@ -3,7 +3,7 @@
 homedir="/home/joshua"
 
 if [ "$EUID" -ne 0 ]; then
-	echo "**Must be root in order to install base system**"
+	echo "**Must be root in order to install dependencies**"
 	exit
 fi
 
