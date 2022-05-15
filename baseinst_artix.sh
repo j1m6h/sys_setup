@@ -17,7 +17,7 @@ partition() {
 }
 
 setup_encryption() {
-	cryptsetup luksFormat -v --type=luks1 $device
+	cryptsetup luksFormat -v --type=luks1 $device\2
 	cryptsetup luksOpen $device cryptlvm
 
 	pvcreate /dev/mapper/cryptlvm 
@@ -47,7 +47,7 @@ mount_partitions() {
 
 install_base() {
 	# install the base system... kernel + init
-	basestrap /mnt base base-devil runit
+	basestrap /mnt base base-devil runit elogind-runit
 	basestrap /mnt linux-firmware linux linux-headers
 
 	# generate fstab file and use device UUIDs
